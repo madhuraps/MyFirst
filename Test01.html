@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyFirstTest</title>
 </head>
+
 <body>
-    
+    <div>
+        <b>Enter first Number: </b><br>
+        <input type="number" id="input1" /><br />
+        <b>Enter second Number: </b><br />
+        <input type="number" id="input2" /><br /><br>
+        <button id="btn">Calculate</button>
+
+    </div>
+
+
+
+    <script>
+        const myForm = document.getElementById("btn");
+
+        myForm.addEventListener("click", () => {
+
+            console.log("Test");
+            const input1 = document.getElementById("input1").value;
+            const input2 = document.getElementById("input2").value;
+
+            finalResult(parseInt(input1), parseInt(input2)); // This is where the program runs.
+
+        });
+
+        add = (x, y) => x + y;
+        substract = (x, y) => x - y;
+        multiply = (x, y) => x * y;
+        divide = (x, y) => x / y;
+
+
+        function consoleOutput(x, operator, y, finalValue) {
+            const line1 = "The Value of";
+            const line2 = "=";
+
+            console.log(`${line1} ${x} ${operator} ${y} ${line2} ${finalValue}`);
+        }
+
+        function finalResult(x, y) {
+            consoleOutput(x, "+", y, add(x, y));
+            consoleOutput(x, "-", y, substract(x, y));
+            consoleOutput(x, "*", y, multiply(x, y));
+            consoleOutput(x, "/", y, divide(x, y));
+        }
+    </script>
+
 </body>
+
 </html>
