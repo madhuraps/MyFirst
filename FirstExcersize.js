@@ -3,6 +3,7 @@ substract = (x, y) => x - y;
 multiply = (x, y) => x * y;
 divide = (x, y) => x / y;
 
+
 function consoleOutput(x, operator, y, finalValue) {
     const line1 = "The Value of";
     const line2 = "=";
